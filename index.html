@@ -1,1464 +1,1955 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Love Kumar - Mern Stack Website Developer</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Love Kumar - Strategy website</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/icon.png" rel="icon" />
+    <link href="assets/img/icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/icon.png" rel="icon">
-  <link href="assets/img/icon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <h1 class="sitename">Love Kumar</h1>
+        </a>
 
-<body class="index-page">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-  
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Love Kumar</h1>
-      </a>
-  
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-  
-          <li class="dropdown"><a href="#"><span>Skills</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li class="dropdown"><a href="#"><span>Frontend Skills</span> <i class="bi bi-chevron-right toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">HTML</a></li>
-                  <li><a href="#">CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                  <li><a href="#">React.js</a></li>
-                  <li><a href="#">Next.js</a></li>
-                  <li><a href="#">Tailwind CSS</a></li>
-                  <li><a href="#">Bootstrap</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Firebase</a></li>
-              <li><a href="#">Shopify</a></li>
-              <li><a href="#">WordPress</a></li>
-            </ul>
-          </li>
-  
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-  
-      <a class="btn-getstarted" href="https://www.fiverr.com/loveamrani" target="_blank">Hire me</a>
-  
-    </div>
-  </header>
-  
-  
+            <li class="dropdown">
+              <a href="#"
+                ><span>Skills</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Frontend Skills</span>
+                    <i class="bi bi-chevron-right toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">React.js</a></li>
+                    <li><a href="#">Next.js</a></li>
+                    <li><a href="#">Tailwind CSS</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Firebase</a></li>
+                <li><a href="#">Shopify</a></li>
+                <li><a href="#">WordPress</a></li>
+              </ul>
+            </li>
 
-  <main class="main">
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-    <!-- Hero Section -->
-<section id="hero" class="hero section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 content-col" data-aos="fade-up">
-        <div class="content">
-          <div class="agency-name">
-            <h5>About Love Kumar</h5>
-          </div>
-
-          <div class="main-heading">
-            <h1>PROFESSIONAL <br>WEB DEVELOPER</h1>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="description">
-            <p>I’m Love Kumar, a passionate website developer with over 3+ years of experience. I’ve completed 100+ successful projects for 30+ international clients. I specialize in crafting modern, high-performance websites using HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, Bootstrap, Firebase, and also Shopify, Wix, Squarespace and WordPress.</p>
-          </div>
-
-          <div class="cta-button">
-            <a href="#services" class="btn">
-              <span>EXPLORE SERVICES</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        <a
+          class="btn-getstarted"
+          href="https://www.fiverr.com/loveamrani"
+          target="_blank"
+          >Hire me</a
+        >
       </div>
+    </header>
 
-      <div class="col-lg-5" data-aos="zoom-out">
-        <div class="visual-content">
-          <div class="fluid-shape">
-            <img src="./assets/img/about/lovekumarheroimage.png" alt="Abstract Fluid Shape" class="fluid-img">
-          </div>
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 content-col" data-aos="fade-up">
+              <div class="content">
+                <div class="agency-name">
+                  <h5>About Love Kumar</h5>
+                </div>
 
-          <div class="stats-card">
-            <div class="stats-number">
-              <h2>100+</h2>
-            </div>
-            <div class="stats-label">
-              <p>Projects Completed</p>
-            </div>
-            <div class="stats-arrow">
-              <a href="#portfolio"><i class="bi bi-arrow-up-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Hero Section -->
+                <div class="main-heading">
+                  <h1>PROFESSIONAL <br />MERN STACK DEVELOPER</h1>
+                </div>
 
+                <div class="divider"></div>
 
-<!-- About Section -->
-<section id="about" class="about section">
+                <div class="description">
+                  <p>
+                    I’m Love Kumar, a MERN Stack Developer, Frontend Specialist,
+                    and CMS Expert with 3+ years of experience in building
+                    scalable, high-performance, and user-friendly websites. I
+                    have successfully completed 100+ projects for 30+
+                    international clients, delivering solutions that combine
+                    functionality with modern design. <br /><br />
+                    My expertise includes HTML, CSS, JavaScript, React.js,
+                    Next.js, Tailwind CSS, Bootstrap, and Firebase, along with
+                    CMS platforms like Shopify, WordPress, Wix, and Squarespace.
+                    I am passionate about creating responsive, optimized, and
+                    engaging digital experiences that help businesses grow and
+                    stand out online.
+                  </p>
+                </div>
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>About</h2>
-    <div><span>Get to Know</span> <span class="description-title">Love Kumar</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-    <div class="row gx-5 align-items-center">
-      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-        <div class="about-image position-relative">
-          <img src="assets/img/about/about-portrait-1.webp" class="img-fluid rounded-4 shadow-sm" alt="Love Kumar" loading="lazy">
-          <div class="experience-badge">
-            <span class="years">3+</span>
-            <span class="text">Years of Experience</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-delay="300">
-        <div class="about-content">
-          <h2>Transforming Ideas Into Powerful Websites</h2>
-          <p class="lead">Hi, I’m Love Kumar — also known as Developer Janu. I help brands grow online with custom, high-performance websites.</p>
-          <p>With over 3 years of hands-on experience, I’ve completed 100+ projects for 30+ international clients using modern web technologies like React.js, Next.js, Shopify, and WordPress.</p>
-
-          <div class="row g-4 mt-3">
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
-              <div class="feature-item">
-                <i class="bi bi-check-circle-fill"></i>
-                <h5>Client-Centered Approach</h5>
-                <p>I deliver solutions tailored to your goals — ensuring performance, pixel-perfection, and growth-driven results.</p>
+                <div class="cta-button">
+                  <a href="https://www.fiverr.com/loveamrani" class="btn">
+                    <span>HIRE ME</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
-              <div class="feature-item">
-                <i class="bi bi-lightbulb-fill"></i>
-                <h5>Modern Tech Stack</h5>
-                <p>I build with the latest frameworks and tools to ensure your website is fast, responsive, and future-ready.</p>
+
+            <div class="col-lg-5" data-aos="zoom-out">
+              <div class="visual-content">
+                <div class="fluid-shape">
+                  <img
+                    src="./assets/img/about/lovekumarheroimage.png"
+                    alt="Abstract Fluid Shape"
+                    class="fluid-img"
+                  />
+                </div>
+
+                <div class="stats-card">
+                  <div class="stats-number">
+                    <h2>100+</h2>
+                  </div>
+                  <div class="stats-label">
+                    <p>Projects Completed</p>
+                  </div>
+                  <div class="stats-arrow">
+                    <a href="#portfolio"
+                      ><i class="bi bi-arrow-up-right"></i
+                    ></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <a href="#services" class="btn btn-primary mt-4">Explore My Services</a>
         </div>
-      </div>
-    </div>
+      </section>
+      <!-- /Hero Section -->
 
-    <div class="testimonial-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
-          <div class="testimonial-intro">
-            <h3>Client Feedback</h3>
-            <p>Here’s what some of my amazing clients have said about working with me on their projects.</p>
-            <div class="swiper-nav-buttons mt-4">
-              <button class="slider-prev"><i class="bi bi-arrow-left"></i></button>
-              <button class="slider-next"><i class="bi bi-arrow-right"></i></button>
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About</h2>
+          <div>
+            <span>Get to Know</span>
+            <span class="description-title">Love Kumar</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+              <div class="about-image position-relative">
+                <img
+                  src="assets/img/about/about-portrait-1.webp"
+                  class="img-fluid rounded-4 shadow-sm"
+                  alt="Love Kumar"
+                  loading="lazy"
+                />
+                <div class="experience-badge">
+                  <span class="years">3+</span>
+                  <span class="text">Years of Experience</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-6 mt-4 mt-lg-0"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <div class="about-content">
+                <h2>Transforming Ideas Into Powerful Websites</h2>
+                <p class="lead">
+                  Hi, I’m Love Kumar — also known as Developer Janu. I help
+                  brands grow online with custom, high-performance websites.
+                </p>
+                <p>
+                  With over 3 years of hands-on experience, I’ve completed 100+
+                  projects for 30+ international clients using modern web
+                  technologies like React.js, Next.js, Shopify, and WordPress.
+                </p>
+
+                <div class="row g-4 mt-3">
+                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill"></i>
+                      <h5>Client-Centered Approach</h5>
+                      <p>
+                        I deliver solutions tailored to your goals — ensuring
+                        performance, pixel-perfection, and growth-driven
+                        results.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="feature-item">
+                      <i class="bi bi-lightbulb-fill"></i>
+                      <h5>Modern Tech Stack</h5>
+                      <p>
+                        I build with the latest frameworks and tools to ensure
+                        your website is fast, responsive, and future-ready.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="#services" class="btn btn-primary mt-4"
+                  >Explore My Services</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="testimonial-section mt-5 pt-5"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="row">
+              <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
+                <div class="testimonial-intro">
+                  <h3>Client Feedback</h3>
+                  <p>
+                    Here’s what some of my amazing clients have said about
+                    working with me on their projects.
+                  </p>
+                  <div class="swiper-nav-buttons mt-4">
+                    <button class="slider-prev">
+                      <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <button class="slider-next">
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
+                <div class="testimonial-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 800,
+                      "autoplay": {
+                        "delay": 5000
+                      },
+                      "slidesPerView": 1,
+                      "spaceBetween": 30,
+                      "navigation": {
+                        "nextEl": ".slider-next",
+                        "prevEl": ".slider-prev"
+                      },
+                      "breakpoints": {
+                        "768": {
+                          "slidesPerView": 2
+                        }
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="testimonial-item">
+                        <div class="rating mb-3">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                          "Love Kumar delivered exactly what we needed — fast,
+                          responsive and pixel-perfect. Highly professional and
+                          super easy to work with!"
+                        </p>
+                        <div class="client-info d-flex align-items-center mt-4">
+                          <img
+                            src="assets/img/person/person-f-1.webp"
+                            class="client-img"
+                            alt="Client"
+                            loading="lazy"
+                          />
+                          <div>
+                            <h6 class="mb-0">Emily White</h6>
+                            <span>Creative Director</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="testimonial-item">
+                        <div class="rating mb-3">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <p>
+                          "Working with Developer Janu was a breeze. The
+                          React-based web app exceeded expectations in both
+                          design and functionality."
+                        </p>
+                        <div class="client-info d-flex align-items-center mt-4">
+                          <img
+                            src="assets/img/person/person-m-1.webp"
+                            class="client-img"
+                            alt="Client"
+                            loading="lazy"
+                          />
+                          <div>
+                            <h6 class="mb-0">Marcus Lee</h6>
+                            <span>Startup Founder</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Keep remaining slides as is or replace with more reviews if you want -->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- /About Section -->
 
-        <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
-          <div class="testimonial-slider swiper init-swiper">
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <div>
+            <span>What I Do</span>
+            <span class="description-title">For Clients</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-header">
+            <div class="row align-items-center">
+              <div class="col-lg-8 col-md-12">
+                <div class="service-intro">
+                  <h2 class="service-heading">
+                    <div>Modern Website</div>
+                    <div><span>Development Services</span></div>
+                  </h2>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="service-summary">
+                  <p>
+                    I create responsive, high-converting websites using modern
+                    frameworks and CMS platforms. Whether it’s a custom React
+                    app or a Shopify store, I bring performance and design
+                    together for real results.
+                  </p>
+                  <a href="#portfolio" class="service-btn">
+                    View My Projects
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <a
+                  href="service-details.html"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/build-redesign-or-clone-any-website-using-reactjs-nextjs-and-tailwind?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=2&imp_id=cf91f657-0094-402c-b011-51bb8af06b5b"
+                  >
+                    Custom <span>Website Development</span>
+                  </a>
+                </h3>
+                <p>
+                  Clean, scalable code using React.js, Next.js, and modern
+                  frameworks to build lightning-fast and SEO-friendly websites.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-bag-check"></i>
+                </div>
+                <a
+                  href="https://www.fiverr.com/loveamrani/build-rebuild-design-redesign-and-revamp-custom-squarespace-websites?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=4&imp_id=1aabcdf9-7c90-49b5-8295-1c1962000151"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/build-rebuild-design-redesign-and-revamp-custom-squarespace-websites?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=4&imp_id=1aabcdf9-7c90-49b5-8295-1c1962000151"
+                  >
+                    CMS <span>Store Setup</span>
+                  </a>
+                </h3>
+                <p>
+                  Fully customized Shopify, WordPress Wix and Squarespace stores
+                  with product setup, theme customization, and optimized
+                  checkout for better conversions.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-brush"></i>
+                </div>
+                <a
+                  href="https://www.fiverr.com/loveamrani/convert-psd-xd-and-figma-to-html-css-react-js-next-js?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=1&imp_id=28dba7a0-aceb-44a5-a379-1fc929cf83c2"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/convert-psd-xd-and-figma-to-html-css-react-js-next-js?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=1&imp_id=28dba7a0-aceb-44a5-a379-1fc929cf83c2"
+                  >
+                    UI/UX <span>Design</span>
+                  </a>
+                </h3>
+                <p>
+                  Beautiful, user-friendly interfaces built with Figma concepts
+                  and implemented using Tailwind CSS or Bootstrap.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-wordpress"></i>
+                </div>
+                <a
+                  href="https://www.fiverr.com/loveamrani/be-your-shopify-developer-and-fix-any-bugs-or-do-custom-theme-development?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=3&imp_id=ca9d3005-ddb9-466e-9d55-c47ae10ab223"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/be-your-shopify-developer-and-fix-any-bugs-or-do-custom-theme-development?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=3&imp_id=ca9d3005-ddb9-466e-9d55-c47ae10ab223"
+                  >
+                    WordPress <span>Customization</span>
+                  </a>
+                </h3>
+                <p>
+                  From theme tweaks to full-site builds, I customize WordPress
+                  to match your exact requirements and branding.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-fire"></i>
+                </div>
+                <a
+                  href="service-details.html"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/build-redesign-or-clone-any-website-using-reactjs-nextjs-and-tailwind?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=2&imp_id=cf91f657-0094-402c-b011-51bb8af06b5b"
+                  >
+                    Mern Stack Development <span>Integrations</span>
+                  </a>
+                </h3>
+                <p>
+                  Real-time database, auth, and hosting setups using Backend —
+                  perfect for fast, scalable applications and prototypes.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="service-card position-relative z-1">
+                <div class="service-icon">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <a
+                  href="https://www.fiverr.com/loveamrani/build-redesign-or-clone-any-website-using-reactjs-nextjs-and-tailwind?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=2&imp_id=cf91f657-0094-402c-b011-51bb8af06b5b"
+                  class="card-action d-flex align-items-center justify-content-center rounded-circle"
+                >
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+                <h3>
+                  <a
+                    href="https://www.fiverr.com/loveamrani/build-redesign-or-clone-any-website-using-reactjs-nextjs-and-tailwind?context_referrer=seller_page&ref_ctx_id=884ba8affc82480e9cad8e2e0c27a9de&pckg_id=1&pos=2&imp_id=cf91f657-0094-402c-b011-51bb8af06b5b"
+                  >
+                    Responsive <span>Web Design</span>
+                  </a>
+                </h3>
+                <p>
+                  Mobile-first design that ensures your website looks stunning
+                  and works flawlessly on every screen size.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Steps Section -->
+      <section id="steps" class="steps section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Steps</h2>
+          <div>
+            <span>How I</span>
+            <span class="description-title">Work With You</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="steps-wrapper">
+            <div class="step-item" data-aos="fade-right" data-aos-delay="200">
+              <div class="step-content">
+                <div class="step-icon">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="step-info">
+                  <span class="step-number">Step 01</span>
+                  <h3>Understanding Your Vision</h3>
+                  <p>
+                    We start with a detailed conversation to understand your
+                    business goals, project scope, and design preferences for
+                    the website or application.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Step Item -->
+
+            <div class="step-item" data-aos="fade-left" data-aos-delay="300">
+              <div class="step-content">
+                <div class="step-icon">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <div class="step-info">
+                  <span class="step-number">Step 02</span>
+                  <h3>Wireframing & Strategy</h3>
+                  <p>
+                    I create a clear project plan with timelines, milestones,
+                    and low-fidelity wireframes to visualize layout, flow, and
+                    user experience before development begins.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Step Item -->
+
+            <div class="step-item" data-aos="fade-right" data-aos-delay="400">
+              <div class="step-content">
+                <div class="step-icon">
+                  <i class="bi bi-bar-chart"></i>
+                </div>
+                <div class="step-info">
+                  <span class="step-number">Step 03</span>
+                  <h3>Development & Testing</h3>
+                  <p>
+                    Using the best tools like React, Next.js, or Shopify, I
+                    build your project with clean, scalable code — followed by
+                    thorough testing on all devices.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Step Item -->
+
+            <div class="step-item" data-aos="fade-left" data-aos-delay="500">
+              <div class="step-content">
+                <div class="step-icon">
+                  <i class="bi bi-check2-circle"></i>
+                </div>
+                <div class="step-info">
+                  <span class="step-number">Step 04</span>
+                  <h3>Launch & Ongoing Support</h3>
+                  <p>
+                    After final approval, your website goes live. I stay
+                    connected for post-launch support, updates, and any tweaks
+                    you may need later on.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- End Step Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Steps Section -->
+
+      <!-- Call To Action Section -->
+      <section id="call-to-action" class="call-to-action section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative"
+          >
+            <div
+              class="content-left flex-grow-1"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <span class="badge text-uppercase mb-2"
+                >Let’s Build Together</span
+              >
+              <h2>Boost Your Online Presence with a Developer Who Cares</h2>
+              <p class="my-4">
+                I help brands, startups, and entrepreneurs launch
+                high-performing websites using the latest technologies. Whether
+                you're starting from scratch or need a redesign — I've got your
+                back.
+              </p>
+
+              <div class="features d-flex flex-wrap gap-3 mb-4">
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Modern Tech Stack</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Pixel-Perfect Designs</span>
+                </div>
+                <div class="feature-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>Responsive & Fast</span>
+                </div>
+              </div>
+
+              <div class="cta-buttons d-flex flex-wrap gap-3">
+                <a href="#contact" class="btn btn-primary"
+                  >Let’s Work Together</a
+                >
+                <a href="#portfolio" class="btn btn-outline">See My Work</a>
+              </div>
+            </div>
+            <div
+              class="content-right position-relative"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <video
+                src="assets/video/myvideo.mp4"
+                alt="Developer Working"
+                class="img-fluid rounded-4"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+
+              <div class="floating-card">
+                <div class="card-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="card-content">
+                  <span class="stats-number">100+</span>
+                  <span class="stats-text">Projects Completed</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="decoration">
+              <div class="circle-1"></div>
+              <div class="circle-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Testimonials</h2>
+          <div>
+            <span>What My</span>
+            <span class="description-title">Clients Say</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonials-slider swiper init-swiper">
             <script type="application/json" class="swiper-config">
               {
+                "slidesPerView": 1,
                 "loop": true,
-                "speed": 800,
+                "speed": 600,
                 "autoplay": {
                   "delay": 5000
                 },
-                "slidesPerView": 1,
-                "spaceBetween": 30,
                 "navigation": {
-                  "nextEl": ".slider-next",
-                  "prevEl": ".slider-prev"
-                },
-                "breakpoints": {
-                  "768": {
-                    "slidesPerView": 2
-                  }
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
                 }
               }
             </script>
+
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <div class="rating mb-3">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <p>"Love Kumar delivered exactly what we needed — fast, responsive and pixel-perfect. Highly professional and super easy to work with!"</p>
-                  <div class="client-info d-flex align-items-center mt-4">
-                    <img src="assets/img/person/person-f-1.webp" class="client-img" alt="Client" loading="lazy">
-                    <div>
-                      <h6 class="mb-0">Emily White</h6>
-                      <span>Creative Director</span>
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <h2>Flawless Execution</h2>
+                      <p>
+                        Working with Love Kumar was the best decision for our
+                        eCommerce site. His attention to detail and ability to
+                        convert our ideas into a clean, functional Shopify
+                        design was incredible.
+                      </p>
+                      <p>
+                        He communicates clearly, delivers before deadlines, and
+                        goes above and beyond expectations. Highly recommended
+                        for any web development project!
+                      </p>
+                      <div class="profile d-flex align-items-center">
+                        <img
+                          src="assets/img/person/person-m-7.webp"
+                          class="profile-img"
+                          alt=""
+                        />
+                        <div class="profile-info">
+                          <h3>Daniel Moore</h3>
+                          <span>Shopify Store Owner</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="featured-img-wrapper">
+                        <img
+                          src="assets/img/person/person-m-7.webp"
+                          class="featured-img"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- End Testimonial Item -->
 
               <div class="swiper-slide">
                 <div class="testimonial-item">
-                  <div class="rating mb-3">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                  <p>"Working with Developer Janu was a breeze. The React-based web app exceeded expectations in both design and functionality."</p>
-                  <div class="client-info d-flex align-items-center mt-4">
-                    <img src="assets/img/person/person-m-1.webp" class="client-img" alt="Client" loading="lazy">
-                    <div>
-                      <h6 class="mb-0">Marcus Lee</h6>
-                      <span>Startup Founder</span>
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <h2>Reliable & Efficient</h2>
+                      <p>
+                        Love delivered a custom React component that fit
+                        seamlessly into our dashboard. The responsiveness and
+                        code quality were top-notch.
+                      </p>
+                      <p>
+                        He also helped optimize performance and even assisted
+                        post-deployment. I’ll definitely hire him again for
+                        future web projects!
+                      </p>
+                      <div class="profile d-flex align-items-center">
+                        <img
+                          src="assets/img/person/person-f-8.webp"
+                          class="profile-img"
+                          alt=""
+                        />
+                        <div class="profile-info">
+                          <h3>Emily Rivera</h3>
+                          <span>Tech Startup Founder</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="featured-img-wrapper">
+                        <img
+                          src="assets/img/person/person-f-8.webp"
+                          class="featured-img"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- End Testimonial Item -->
 
-              <!-- Keep remaining slides as is or replace with more reviews if you want -->
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <h2>Fast & Professional</h2>
+                      <p>
+                        We needed a quick turnaround on a WordPress redesign.
+                        Love Kumar delivered a pixel-perfect site in less than 5
+                        days.
+                      </p>
+                      <p>
+                        He stayed in touch throughout and even guided us through
+                        deployment. If you need a reliable frontend expert, he’s
+                        your guy.
+                      </p>
+                      <div class="profile d-flex align-items-center">
+                        <img
+                          src="assets/img/person/person-m-9.webp"
+                          class="profile-img"
+                          alt=""
+                        />
+                        <div class="profile-info">
+                          <h3>James Lee</h3>
+                          <span>Freelance Consultant</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="featured-img-wrapper">
+                        <img
+                          src="assets/img/person/person-m-9.webp"
+                          class="featured-img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Testimonial Item -->
 
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <h2>Expert in Shopify & Next.js</h2>
+                      <p>
+                        I hired Love to migrate our old site to Next.js and
+                        integrate Shopify's storefront API. He handled
+                        everything from routing to schema setup like a pro.
+                      </p>
+                      <p>
+                        The result was a blazing-fast, SEO-optimized store with
+                        an elegant UI. Highly skilled and super cooperative!
+                      </p>
+                      <div class="profile d-flex align-items-center">
+                        <img
+                          src="assets/img/person/person-f-10.webp"
+                          class="profile-img"
+                          alt=""
+                        />
+                        <div class="profile-info">
+                          <h3>Sophia Grant</h3>
+                          <span>Agency Owner</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="featured-img-wrapper">
+                        <img
+                          src="assets/img/person/person-f-10.webp"
+                          class="featured-img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Testimonial Item -->
+            </div>
+
+            <div
+              class="swiper-navigation w-100 d-flex align-items-center justify-content-center"
+            >
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- /Testimonials Section -->
+
+   <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <div>
+      <span>Check Our</span>
+      <span class="description-title">Portfolio</span>
+    </div>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <div class="isotope-layout container" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <!-- Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+        <li data-filter="*" class="filter-active"><i class="bi bi-grid-3x3"></i> All Projects</li>
+        <li data-filter=".filter-ui"><i class="bi bi-phone"></i> UI/UX</li>
+        <li data-filter=".filter-development"><i class="bi bi-code-slash"></i> Development</li>
+      </ul>
+
+      <!-- Portfolio Items -->
+      <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+        <!-- Project 1 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project1.png" class="img-fluid" alt="Business Website" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">UI/UX Design</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumarscoutwebsite.netlify.app/" target="_blank">Business Website</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project2.png" class="img-fluid" alt="E-Commerce Platform" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Development</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumareasyfolio.netlify.app/" target="_blank">E-Commerce Platform</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project3.png" class="img-fluid" alt="Portfolio Website" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">UI/UX Design</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumarnicerestaurant.netlify.app/" target="_blank">Portfolio Website</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project4.png" class="img-fluid" alt="Startup Landing Page" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Development</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumardewi.netlify.app/" target="_blank">Startup Landing Page</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project5.png" class="img-fluid" alt="Blog Website" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">UI/UX Design</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumarilanding.netlify.app/" target="_blank">Blog Website</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project6.png" class="img-fluid" alt="Corporate Website" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Development</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumar-quick-start-website.vercel.app/" target="_blank">Corporate Website</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project7.png" class="img-fluid" alt="SaaS Platform" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">UI/UX Design</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumarstrategicsolutionsbusiness.netlify.app/" target="_blank">SaaS Platform</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+          <article class="portfolio-entry">
+            <figure class="entry-image">
+              <img src="assets/img/project8.png" class="img-fluid" alt="Landing Page Design" loading="lazy" />
+              <div class="entry-overlay">
+                <div class="overlay-content">
+                  <div class="entry-meta">Development</div>
+                  <h3 class="entry-title">
+                    <a href="https://lovekumarbootslander.netlify.app/" target="_blank">Landing Page Design</a>
+                  </h3>
+                </div>
+              </div>
+            </figure>
+          </article>
+        </div>
+
       </div>
+      <!-- End Portfolio Items -->
     </div>
   </div>
 </section>
-<!-- /About Section -->
+<!-- /Portfolio Section -->
 
-<!-- Services Section -->
-<section id="services" class="services section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Services</h2>
-    <div><span>What I Do</span> <span class="description-title">For Clients</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="service-header">
-      <div class="row align-items-center">
-        <div class="col-lg-8 col-md-12">
-          <div class="service-intro">
-            <h2 class="service-heading">
-              <div>Modern Website</div>
-              <div><span>Development Services</span></div>
-            </h2>
+      <!-- Team Section -->
+      <section id="team" class="team section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <div>
+            <span>Meet The</span> <span class="description-title">Experts</span>
           </div>
         </div>
-        <div class="col-lg-4 col-md-12">
-          <div class="service-summary">
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <!-- Team Member 1 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/lovekhimani.png"
+                    class="img-fluid"
+                    alt="Love Kumar"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Love Kumar</h4>
+                  <span>Founder & Lead Developer</span>
+                  <p>
+                    Delivered over 200 projects with expertise in MERN Stack and
+                    CMS platforms like Shopify and WordPress. Specializes in
+                    React.js, Next.js, and building custom, high-performance web
+                    applications tailored to your needs and brands.
+                  </p>
+                  <!-- <div class="social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/mukeshkhimani.jpg"
+                    class="img-fluid"
+                    alt="Wasdev Kumar"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Mukesh Kumar</h4>
+                  <span>Frontend Developer & CMS Expert</span>
+                  <p>
+                    Specializes in building responsive, high-performance
+                    websites using React.js, Next.js, Shopify, WordPress, Wix,
+                    and Squarespace. Delivers clean code, optimized user
+                    experiences, and scalable CMS solutions tailored for clients
+                    worldwide.
+                  </p>
+                  <!-- <div class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/suneelamrani.jpg"
+                    class="img-fluid"
+                    alt="Hassan Raza"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Suneel Amrani</h4>
+                  <span>React.js & Next.js Frontend Expert</span>
+                  <p>
+                    Expert in building high-performance, responsive web
+                    applications using React.js, Next.js, and Tailwind CSS.
+                    Develops dynamic UI/UX and integrates frontend with CMS
+                    platforms like Shopify, WordPress.
+                  </p>
+                  <!-- <div class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/dileepamrani.jpg"
+                    class="img-fluid"
+                    alt="Alina Sheikh"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Dileep Amrani</h4>
+                  <span>MERN Stack & Web App Developer</span>
+                  <p>
+                    Builds responsive and scalable web applications using
+                    React.js, Next.js, and Node.js. Skilled in CMS integration
+                    and optimizing frontend performance for seamless user
+                    experiences.
+                  </p>
+                  <!-- <div class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/suneelsuthar.jpg"
+                    class="img-fluid"
+                    alt="Arsalan Ahmed"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Suneel Suthar</h4>
+                  <span>Full Stack & Mobile App Expert</span>
+                  <p>
+                    Develops robust web and mobile applications using the MERN
+                    stack and React Native. Focused on creating seamless,
+                    bug-free solutions with high performance and optimized
+                    UI/UX.
+                  </p>
+                  <!-- <div class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="team-member d-flex">
+                <div class="member-img">
+                  <img
+                    src="assets/img/amratshivani.jpg"
+                    class="img-fluid"
+                    alt="Mehak Ali"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="member-info flex-grow-1">
+                  <h4>Amrat Shivani</h4>
+                  <span>MERN Stack & Web Specialist</span>
+                  <p>
+                    Expert in building scalable web and CMS-integrated
+                    applications using React.js, Next.js, and Node.js. Delivers
+                    clean, maintainable code and optimized performance across
+                    web and mobile platforms.
+                  </p>
+                  <!-- <div class="social">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+      </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Pricing</h2>
+          <div>
+            <span>Flexible</span>
+            <span class="description-title">Packages for Every Need</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <!-- Starter Plan -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="pricing-card">
+                <div class="plan-header">
+                  <div class="plan-icon">
+                    <i class="bi bi-box"></i>
+                  </div>
+                  <h3>Starter</h3>
+                  <p>Perfect for portfolio sites or landing pages</p>
+                </div>
+                <div class="plan-pricing">
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">100</span>
+                    <span class="period">/project</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <ul>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> 1-Page Design &
+                      Development
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Mobile Responsive
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Basic SEO Setup
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> MERN Stack Setup
+                      (React.js + Node.js)
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Cross-browser
+                      Compatibility
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> 1 Week Free
+                      Support & Bug Fixes
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Performance
+                      Optimization
+                    </li>
+                    <li class="disabled">
+                      <i class="bi bi-x-circle-fill"></i> CMS/Blog Integration
+                    </li>
+                    <li class="disabled">
+                      <i class="bi bi-x-circle-fill"></i> Custom Animation
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="plan-cta">
+                  <a
+                    target="_blank"
+                    href="https://www.fiverr.com/loveamrani/convert-psd-xd-and-figma-to-html-css-react-js-next-js?context_referrer=seller_page&ref_ctx_id=19b0f3a0d1c4478d86cb9a7d267122f5&pckg_id=1&pos=1&seller_online=true&imp_id=8677efba-64ca-4c3d-9efc-ee646eeadcbc"
+                    class="btn-plan"
+                    >Choose Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Professional Plan -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="pricing-card popular">
+                <div class="popular-tag">Most Popular</div>
+                <div class="plan-header">
+                  <div class="plan-icon">
+                    <i class="bi bi-briefcase"></i>
+                  </div>
+                  <h3>Professional</h3>
+                  <p>Ideal for startups & eCommerce businesses</p>
+                </div>
+                <div class="plan-pricing">
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">200</span>
+                    <span class="period">/project</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <ul>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Up to 5 Pages
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Shopify,
+                      WordPress, or Wix Setup
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> MERN Stack Web App
+                      Development
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Contact &
+                      Newsletter Forms
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Blog or CMS
+                      Integration
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Responsive &
+                      Cross-browser Compatible
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Performance
+                      Optimization & SEO Basics
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> 2 Weeks Free
+                      Support & Bug Fixes
+                    </li>
+                    <li class="disabled">
+                      <i class="bi bi-x-circle-fill"></i> Priority Support
+                      (Optional Add-on)
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="plan-cta">
+                  <a
+                    target="_blank"
+                    href="https://www.fiverr.com/loveamrani/convert-psd-xd-and-figma-to-html-css-react-js-next-js?context_referrer=seller_page&ref_ctx_id=19b0f3a0d1c4478d86cb9a7d267122f5&pckg_id=1&pos=1&seller_online=true&imp_id=8677efba-64ca-4c3d-9efc-ee646eeadcbc"
+                    class="btn-plan"
+                    >Choose Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="pricing-card">
+                <div class="plan-header">
+                  <div class="plan-icon">
+                    <i class="bi bi-building"></i>
+                  </div>
+                  <h3>Enterprise</h3>
+                  <p>Complete solution for high-end businesses</p>
+                </div>
+                <div class="plan-pricing">
+                  <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">300</span>
+                    <span class="period">/project</span>
+                  </div>
+                </div>
+                <div class="plan-features">
+                  <ul>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Custom Design &
+                      Development
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Advanced
+                      Animations & UI/UX
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> MERN Stack
+                      Full-Stack Web & Mobile App Development
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> API Integration &
+                      Backend Setup
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Shopify,
+                      WordPress, Wix & Squarespace CMS Integration
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Performance
+                      Optimization & SEO Advanced Setup
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Hosting Setup &
+                      Domain Configuration
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> 30 Days Free
+                      Maintenance & Support
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill"></i> Priority Support &
+                      Consultation
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="plan-cta">
+                  <a
+                    target="_blank"
+                    href="https://www.fiverr.com/loveamrani/convert-psd-xd-and-figma-to-html-css-react-js-next-js?context_referrer=seller_page&ref_ctx_id=19b0f3a0d1c4478d86cb9a7d267122f5&pckg_id=1&pos=1&seller_online=true&imp_id=8677efba-64ca-4c3d-9efc-ee646eeadcbc"
+                    class="btn-plan"
+                    >Choose Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Pricing Section -->
+
+      <!-- Faq Section -->
+      <section class="faq-9 faq section" id="faq">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5" data-aos="fade-up">
+              <h2 class="faq-title">Have a question? Check out the FAQ</h2>
+              <p class="faq-description">
+                Find answers to common questions about my web development
+                services, technologies I use, and how I deliver high-quality,
+                responsive websites for clients worldwide.
+              </p>
+              <div
+                class="faq-arrow d-none d-lg-block"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <!-- (SVG remains unchanged) -->
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3>What services do you offer as a web developer?</h3>
+                  <div class="faq-content">
+                    <p>
+                      I specialize in creating responsive websites using HTML,
+                      CSS, JavaScript, React.js, Next.js, Tailwind CSS, and
+                      Bootstrap. I also build custom Shopify and WordPress sites
+                      tailored to client needs.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Can you develop Shopify stores with custom features?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, I create fully customized Shopify stores, including
+                      dynamic sections, sliders, product pages, and unique
+                      features using Liquid, JSON schema, and advanced frontend
+                      integrations.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Do you work with WordPress and WooCommerce?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Absolutely. I develop and customize WordPress websites and
+                      WooCommerce stores, offering both design and functionality
+                      improvements tailored to your business goals.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Are your websites responsive and mobile-friendly?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, all my projects are fully responsive and optimized
+                      for all screen sizes, ensuring a pixel-perfect design on
+                      desktop and a seamless user experience on mobile and
+                      tablets.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Do you offer performance and SEO optimization?</h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes. I follow best practices for website performance,
+                      including lazy loading, asset optimization, and technical
+                      SEO to ensure fast-loading, search engine–friendly
+                      websites.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+
+                <div class="faq-item">
+                  <h3>How can I get started with my project?</h3>
+                  <div class="faq-content">
+                    <p>
+                      You can contact me with your project details. I’ll review
+                      your requirements, suggest the best tech stack, and
+                      provide a clear plan to bring your vision to life
+                      professionally and efficiently.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Faq Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <div>
+            <span>Let's</span> <span class="description-title">Connect</span>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Contact Info Boxes -->
+          <div class="row gy-4 mb-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="contact-info-box">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Location</h4>
+                  <p>Mithi, Tharparkar Pakistan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="contact-info-box">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Email Me</h4>
+                  <p>
+                    <a href="mailto:lovekumaramrani13@gmail.com"
+                      >lovekumaramrani13@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <a href="mailto:lovedeveloper14@gmail.com"
+                      >lovedeveloper14@gmail.com</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="contact-info-box">
+                <div class="icon-box">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Working Hours</h4>
+                  <p>Mon - Sat: 10 AM - 8 PM (PKT)</p>
+                  <p>Sunday: Available for Urgent Requests</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps (Full Width) -->
+        <div class="map-section" data-aos="fade-up" data-aos-delay="200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+            width="100%"
+            height="500"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <!-- Contact Form Section (Overlapping) -->
+        <div class="container form-container-overlap">
+          <div
+            class="row justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="col-lg-10">
+              <div class="contact-form-wrapper">
+                <h2 class="text-center mb-4">Get in Touch</h2>
+
+                <form
+                  action="forms/contact.php"
+                  method="post"
+                  class="php-email-form"
+                >
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-with-icon">
+                          <i class="bi bi-person"></i>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            placeholder="First Name"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <div class="input-with-icon">
+                          <i class="bi bi-envelope"></i>
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="Email Address"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-with-icon">
+                          <i class="bi bi-text-left"></i>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="subject"
+                            placeholder="Subject"
+                            required=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-group">
+                        <div class="input-with-icon">
+                          <i class="bi bi-chat-dots message-icon"></i>
+                          <textarea
+                            class="form-control"
+                            name="message"
+                            placeholder="Write Message..."
+                            style="height: 180px"
+                            required=""
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">
+                        Your message has been sent. Thank you!
+                      </div>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary btn-submit">
+                        SEND MESSAGE
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Love Kumar</span>
+            </a>
             <p>
-              I create responsive, high-converting websites using modern frameworks and CMS platforms. Whether it’s a custom React app or a Shopify store, I bring performance and design together for real results.
+              I’m a passionate and experienced web developer delivering
+              high-quality, responsive websites and Shopify stores. From design
+              to deployment, I craft digital experiences that drive results and
+              client satisfaction.
             </p>
-            <a href="#portfolio" class="service-btn">
-              View My Projects
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-code-slash"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Custom <span>Website Development</span>
-            </a>
-          </h3>
-          <p>
-            Clean, scalable code using React.js, Next.js, and modern frameworks to build lightning-fast and SEO-friendly websites.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-bag-check"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Shopify <span>Store Setup</span>
-            </a>
-          </h3>
-          <p>
-            Fully customized Shopify stores with product setup, theme customization, and optimized checkout for better conversions.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-brush"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              UI/UX <span>Design</span>
-            </a>
-          </h3>
-          <p>
-            Beautiful, user-friendly interfaces built with Figma concepts and implemented using Tailwind CSS or Bootstrap.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-wordpress"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              WordPress <span>Customization</span>
-            </a>
-          </h3>
-          <p>
-            From theme tweaks to full-site builds, I customize WordPress to match your exact requirements and branding.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-fire"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Firebase <span>Integrations</span>
-            </a>
-          </h3>
-          <p>
-            Real-time database, auth, and hosting setups using Firebase — perfect for fast, scalable applications and prototypes.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-card position-relative z-1">
-          <div class="service-icon">
-            <i class="bi bi-phone"></i>
-          </div>
-          <a href="service-details.html" class="card-action d-flex align-items-center justify-content-center rounded-circle">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-          <h3>
-            <a href="service-details.html">
-              Responsive <span>Web Design</span>
-            </a>
-          </h3>
-          <p>
-            Mobile-first design that ensures your website looks stunning and works flawlessly on every screen size.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Services Section -->
-
-
-<!-- Steps Section -->
-<section id="steps" class="steps section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Steps</h2>
-    <div><span>How I</span> <span class="description-title">Work With You</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="steps-wrapper">
-
-      <div class="step-item" data-aos="fade-right" data-aos-delay="200">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 01</span>
-            <h3>Understanding Your Vision</h3>
-            <p>We start with a detailed conversation to understand your business goals, project scope, and design preferences for the website or application.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-      <div class="step-item" data-aos="fade-left" data-aos-delay="300">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-gear"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 02</span>
-            <h3>Wireframing & Strategy</h3>
-            <p>I create a clear project plan with timelines, milestones, and low-fidelity wireframes to visualize layout, flow, and user experience before development begins.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-      <div class="step-item" data-aos="fade-right" data-aos-delay="400">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-bar-chart"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 03</span>
-            <h3>Development & Testing</h3>
-            <p>Using the best tools like React, Next.js, or Shopify, I build your project with clean, scalable code — followed by thorough testing on all devices.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-      <div class="step-item" data-aos="fade-left" data-aos-delay="500">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-check2-circle"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 04</span>
-            <h3>Launch & Ongoing Support</h3>
-            <p>After final approval, your website goes live. I stay connected for post-launch support, updates, and any tweaks you may need later on.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-    </div>
-
-  </div>
-
-</section><!-- /Steps Section -->
-
-
-   <!-- Call To Action Section -->
-<section id="call-to-action" class="call-to-action section">
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
-
-      <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
-        <span class="badge text-uppercase mb-2">Let’s Build Together</span>
-        <h2>Boost Your Online Presence with a Developer Who Cares</h2>
-        <p class="my-4">I help brands, startups, and entrepreneurs launch high-performing websites using the latest technologies. Whether you're starting from scratch or need a redesign — I've got your back.</p>
-
-        <div class="features d-flex flex-wrap gap-3 mb-4">
-          <div class="feature-item">
-            <i class="bi bi-check-circle-fill"></i>
-            <span>Modern Tech Stack</span>
-          </div>
-          <div class="feature-item">
-            <i class="bi bi-check-circle-fill"></i>
-            <span>Pixel-Perfect Designs</span>
-          </div>
-          <div class="feature-item">
-            <i class="bi bi-check-circle-fill"></i>
-            <span>Responsive & Fast</span>
-          </div>
-        </div>
-
-        <div class="cta-buttons d-flex flex-wrap gap-3">
-          <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
-          <a href="#portfolio" class="btn btn-outline">See My Work</a>
-        </div>
-      </div>
-
-      <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
-        <img src="assets/img/misc/misc-1.webp" alt="Developer Working" class="img-fluid rounded-4">
-        <div class="floating-card">
-          <div class="card-icon">
-            <i class="bi bi-graph-up-arrow"></i>
-          </div>
-          <div class="card-content">
-            <span class="stats-number">100+</span>
-            <span class="stats-text">Projects Completed</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="decoration">
-        <div class="circle-1"></div>
-        <div class="circle-2"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- /Call To Action Section -->
-
-
-   <!-- Testimonials Section -->
-<section id="testimonials" class="testimonials section light-background">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Testimonials</h2>
-    <div><span>What My</span> <span class="description-title">Clients Say</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="testimonials-slider swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "slidesPerView": 1,
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "navigation": {
-            "nextEl": ".swiper-button-next",
-            "prevEl": ".swiper-button-prev"
-          }
-        }
-      </script>
-
-      <div class="swiper-wrapper">
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row">
-              <div class="col-lg-8">
-                <h2>Flawless Execution</h2>
-                <p>
-                  Working with Love Kumar was the best decision for our eCommerce site. His attention to detail and ability to convert our ideas into a clean, functional Shopify design was incredible.
-                </p>
-                <p>
-                  He communicates clearly, delivers before deadlines, and goes above and beyond expectations. Highly recommended for any web development project!
-                </p>
-                <div class="profile d-flex align-items-center">
-                  <img src="assets/img/person/person-m-7.webp" class="profile-img" alt="">
-                  <div class="profile-info">
-                    <h3>Daniel Moore</h3>
-                    <span>Shopify Store Owner</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="featured-img-wrapper">
-                  <img src="assets/img/person/person-m-7.webp" class="featured-img" alt="">
-                </div>
-              </div>
+            <div class="social-links d-flex mt-4">
+              <a target="_blank" href="https://www.tiktok.com/@love_developer"
+                ><i class="bi bi-tiktok"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://web.facebook.com/lovekumar.suthar.2025/"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a target="_blank" href="https://www.instagram.com/love_amrani/"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/love-kumar-mern-stack-developer-58ab64362/"
+                ><i class="bi bi-linkedin"></i
+              ></a>
             </div>
           </div>
-        </div><!-- End Testimonial Item -->
 
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row">
-              <div class="col-lg-8">
-                <h2>Reliable & Efficient</h2>
-                <p>
-                  Love delivered a custom React component that fit seamlessly into our dashboard. The responsiveness and code quality were top-notch.
-                </p>
-                <p>
-                  He also helped optimize performance and even assisted post-deployment. I’ll definitely hire him again for future web projects!
-                </p>
-                <div class="profile d-flex align-items-center">
-                  <img src="assets/img/person/person-f-8.webp" class="profile-img" alt="">
-                  <div class="profile-info">
-                    <h3>Emily Rivera</h3>
-                    <span>Tech Startup Founder</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="featured-img-wrapper">
-                  <img src="assets/img/person/person-f-8.webp" class="featured-img" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Testimonial Item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row">
-              <div class="col-lg-8">
-                <h2>Fast & Professional</h2>
-                <p>
-                  We needed a quick turnaround on a WordPress redesign. Love Kumar delivered a pixel-perfect site in less than 5 days.
-                </p>
-                <p>
-                  He stayed in touch throughout and even guided us through deployment. If you need a reliable frontend expert, he’s your guy.
-                </p>
-                <div class="profile d-flex align-items-center">
-                  <img src="assets/img/person/person-m-9.webp" class="profile-img" alt="">
-                  <div class="profile-info">
-                    <h3>James Lee</h3>
-                    <span>Freelance Consultant</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="featured-img-wrapper">
-                  <img src="assets/img/person/person-m-9.webp" class="featured-img" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Testimonial Item -->
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="row">
-              <div class="col-lg-8">
-                <h2>Expert in Shopify & Next.js</h2>
-                <p>
-                  I hired Love to migrate our old site to Next.js and integrate Shopify's storefront API. He handled everything from routing to schema setup like a pro.
-                </p>
-                <p>
-                  The result was a blazing-fast, SEO-optimized store with an elegant UI. Highly skilled and super cooperative!
-                </p>
-                <div class="profile d-flex align-items-center">
-                  <img src="assets/img/person/person-f-10.webp" class="profile-img" alt="">
-                  <div class="profile-info">
-                    <h3>Sophia Grant</h3>
-                    <span>Agency Owner</span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <div class="featured-img-wrapper">
-                  <img src="assets/img/person/person-f-10.webp" class="featured-img" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Testimonial Item -->
-
-      </div>
-
-      <div class="swiper-navigation w-100 d-flex align-items-center justify-content-center">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- /Testimonials Section -->
-
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <div><span>Check Our</span> <span class="description-title">Portfolio</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">
-              <i class="bi bi-grid-3x3"></i> All Projects
-            </li>
-            <li data-filter=".filter-ui">
-              <i class="bi bi-phone"></i> UI/UX
-            </li>
-            <li data-filter=".filter-development">
-              <i class="bi bi-code-slash"></i> Development
-            </li>
-            <li data-filter=".filter-photography">
-              <i class="bi bi-camera"></i> Photography
-            </li>
-            <li data-filter=".filter-marketing">
-              <i class="bi bi-graph-up"></i> Marketing
-            </li>
-          </ul>
-
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">UI/UX Design</div>
-                      <h3 class="entry-title">Mobile Banking App</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Development</div>
-                      <h3 class="entry-title">E-Learning Platform</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-10.webp" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: E-Learning Platform; description: Nulla vitae elit libero, a pharetra augue mollis interdum.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-7.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Photography</div>
-                      <h3 class="entry-title">Urban Architecture</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-7.webp" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Urban Architecture; description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Marketing</div>
-                      <h3 class="entry-title">Social Media Campaign</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Social Media Campaign; description: Quis autem vel eum iure reprehenderit qui in ea voluptate.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">UI/UX Design</div>
-                      <h3 class="entry-title">Smart Home Interface</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Smart Home Interface; description: At vero eos et accusamus et iusto odio dignissimos ducimus.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Development</div>
-                      <h3 class="entry-title">Cloud Management System</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: Cloud Management System; description: Temporibus autem quibusdam et aut officiis debitis.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Photography</div>
-                      <h3 class="entry-title">Nature Collection</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Nature Collection; description: Integer posuere erat a ante venenatis dapibus posuere velit aliquet.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Marketing</div>
-                      <h3 class="entry-title">Brand Strategy</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Brand Strategy; description: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-<!-- Team Section -->
-<section id="team" class="team section light-background">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Team</h2>
-    <div><span>Meet The</span> <span class="description-title">Experts</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <!-- Team Member 1 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-m-7.webp" class="img-fluid" alt="Love Kumar" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Love Kumar</h4>
-            <span>Founder & Lead Developer</span>
-            <p>Over 600 projects delivered with expertise in Shopify, React, Next.js, and custom web platforms.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 2 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-f-8.webp" class="img-fluid" alt="Wasdev Kumar" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Wasdev Kumar</h4>
-            <span>UI/UX Designer</span>
-            <p>Crafts pixel-perfect designs and intuitive user experiences tailored for performance and brand identity.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 3 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-m-6.webp" class="img-fluid" alt="Hassan Raza" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Hassan Raza</h4>
-            <span>Head of Backend</span>
-            <p>Manages scalable infrastructure, secure databases, and APIs across custom CMS and Shopify apps.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 4 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-f-4.webp" class="img-fluid" alt="Alina Sheikh" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Alina Sheikh</h4>
-            <span>Digital Marketer</span>
-            <p>Boosts online presence through SEO, PPC, and strategic social campaigns tailored to each client.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 5 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-m-12.webp" class="img-fluid" alt="Arsalan Ahmed" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Arsalan Ahmed</h4>
-            <span>QA & Optimization</span>
-            <p>Ensures all web products are bug-free, fast, and mobile-ready with best performance metrics.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Team Member 6 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="team-member d-flex">
-          <div class="member-img">
-            <img src="assets/img/person/person-f-9.webp" class="img-fluid" alt="Mehak Ali" loading="lazy">
-          </div>
-          <div class="member-info flex-grow-1">
-            <h4>Mehak Ali</h4>
-            <span>Client Success Manager</span>
-            <p>Builds lasting relationships and ensures smooth communication across all client projects.</p>
-            <div class="social">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- /Team Section -->
-
-
- <!-- Pricing Section -->
-<section id="pricing" class="pricing section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Pricing</h2>
-    <div><span>Flexible</span> <span class="description-title">Packages for Every Need</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row gy-4">
-
-      <!-- Starter Plan -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="pricing-card">
-          <div class="plan-header">
-            <div class="plan-icon">
-              <i class="bi bi-box"></i>
-            </div>
-            <h3>Starter</h3>
-            <p>Perfect for portfolio sites or landing pages</p>
-          </div>
-          <div class="plan-pricing">
-            <div class="price">
-              <span class="currency">$</span>
-              <span class="amount">99</span>
-              <span class="period">/project</span>
-            </div>
-          </div>
-          <div class="plan-features">
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-check-circle-fill"></i> 1-Page Design + Development</li>
-              <li><i class="bi bi-check-circle-fill"></i> Mobile Responsive</li>
-              <li><i class="bi bi-check-circle-fill"></i> Basic SEO Setup</li>
-              <li class="disabled"><i class="bi bi-x-circle-fill"></i> CMS/Blog Integration</li>
-              <li class="disabled"><i class="bi bi-x-circle-fill"></i> Custom Animation</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </div>
-          <div class="plan-cta">
-            <a href="#" class="btn-plan">Choose Plan</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Professional Plan -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-        <div class="pricing-card popular">
-          <div class="popular-tag">Most Popular</div>
-          <div class="plan-header">
-            <div class="plan-icon">
-              <i class="bi bi-briefcase"></i>
-            </div>
-            <h3>Professional</h3>
-            <p>Ideal for startups & eCommerce businesses</p>
-          </div>
-          <div class="plan-pricing">
-            <div class="price">
-              <span class="currency">$</span>
-              <span class="amount">399</span>
-              <span class="period">/project</span>
-            </div>
-          </div>
-          <div class="plan-features">
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
             <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Up to 5 Pages</li>
-              <li><i class="bi bi-check-circle-fill"></i> Shopify or WordPress Setup</li>
-              <li><i class="bi bi-check-circle-fill"></i> Contact + Newsletter Forms</li>
-              <li><i class="bi bi-check-circle-fill"></i> Blog or CMS Integration</li>
-              <li class="disabled"><i class="bi bi-x-circle-fill"></i> Priority Support</li>
+              <li><a href="#">Frontend Development</a></li>
+              <li><a href="#">Shopify Customization</a></li>
+              <li><a href="#">WordPress Development</a></li>
+              <li><a href="#">React/Next.js Projects</a></li>
+              <li><a href="#">Responsive Design</a></li>
             </ul>
           </div>
-          <div class="plan-cta">
-            <a href="#" class="btn-plan">Choose Plan</a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Enterprise Plan -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-        <div class="pricing-card">
-          <div class="plan-header">
-            <div class="plan-icon">
-              <i class="bi bi-building"></i>
-            </div>
-            <h3>Enterprise</h3>
-            <p>Complete solution for high-end businesses</p>
-          </div>
-          <div class="plan-pricing">
-            <div class="price">
-              <span class="currency">$</span>
-              <span class="amount">999</span>
-              <span class="period">/project</span>
-            </div>
-          </div>
-          <div class="plan-features">
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Custom Design & Development</li>
-              <li><i class="bi bi-check-circle-fill"></i> Advanced Animations & UI/UX</li>
-              <li><i class="bi bi-check-circle-fill"></i> API Integration & Backend Setup</li>
-              <li><i class="bi bi-check-circle-fill"></i> Performance Optimization</li>
-              <li><i class="bi bi-check-circle-fill"></i> 30 Days Free Maintenance</li>
-            </ul>
-          </div>
-          <div class="plan-cta">
-            <a href="#" class="btn-plan">Choose Plan</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</section><!-- /Pricing Section -->
-
-
-<!-- Faq Section -->
-<section class="faq-9 faq section" id="faq">
-
-  <div class="container">
-    <div class="row">
-
-      <div class="col-lg-5" data-aos="fade-up">
-        <h2 class="faq-title">Have a question? Check out the FAQ</h2>
-        <p class="faq-description">Find answers to common questions about my web development services, technologies I use, and how I deliver high-quality, responsive websites for clients worldwide.</p>
-        <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
-          <!-- (SVG remains unchanged) -->
-        </div>
-      </div>
-
-      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
-        <div class="faq-container">
-
-          <div class="faq-item faq-active">
-            <h3>What services do you offer as a web developer?</h3>
-            <div class="faq-content">
-              <p>I specialize in creating responsive websites using HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS, and Bootstrap. I also build custom Shopify and WordPress sites tailored to client needs.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can you develop Shopify stores with custom features?</h3>
-            <div class="faq-content">
-              <p>Yes, I create fully customized Shopify stores, including dynamic sections, sliders, product pages, and unique features using Liquid, JSON schema, and advanced frontend integrations.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do you work with WordPress and WooCommerce?</h3>
-            <div class="faq-content">
-              <p>Absolutely. I develop and customize WordPress websites and WooCommerce stores, offering both design and functionality improvements tailored to your business goals.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-          <div class="faq-item">
-            <h3>Are your websites responsive and mobile-friendly?</h3>
-            <div class="faq-content">
-              <p>Yes, all my projects are fully responsive and optimized for all screen sizes, ensuring a pixel-perfect design on desktop and a seamless user experience on mobile and tablets.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do you offer performance and SEO optimization?</h3>
-            <div class="faq-content">
-              <p>Yes. I follow best practices for website performance, including lazy loading, asset optimization, and technical SEO to ensure fast-loading, search engine–friendly websites.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-          <div class="faq-item">
-            <h3>How can I get started with my project?</h3>
-            <div class="faq-content">
-              <p>You can contact me with your project details. I’ll review your requirements, suggest the best tech stack, and provide a clear plan to bring your vision to life professionally and efficiently.</p>
-            </div>
-            <i class="faq-toggle bi bi-chevron-right"></i>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section><!-- /Faq Section -->
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Contact</h2>
-    <div><span>Let's</span> <span class="description-title">Connect</span></div>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <!-- Contact Info Boxes -->
-    <div class="row gy-4 mb-5">
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="contact-info-box">
-          <div class="icon-box">
-            <i class="bi bi-geo-alt"></i>
-          </div>
-          <div class="info-content">
-            <h4>Location</h4>
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Me</h4>
             <p>Mithi, Tharparkar Pakistan</p>
+            <p>Available for global projects</p>
+            <p>Remote & Freelance</p>
+
+            <p class="mt-4">
+              <strong>Phone:</strong>
+              <a href="tel:+923093084224">+92 309 3084224</a>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:lovekumaramrani13@gmail.com"
+                >lovekumaramrani13@gmail.com</a
+              >
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="contact-info-box">
-          <div class="icon-box">
-            <i class="bi bi-envelope"></i>
-          </div>
-          <div class="info-content">
-            <h4>Email Me</h4>
-            <p>lovekumaramrani13@gmail.com</p>
-            <p>lovedeveloper14@gmail.com</p>
-          </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Love Kumar</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed with ❤️ by <a href="#">Developer Janu</a>
         </div>
       </div>
+    </footer>
 
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="contact-info-box">
-          <div class="icon-box">
-            <i class="bi bi-headset"></i>
-          </div>
-          <div class="info-content">
-            <h4>Working Hours</h4>
-            <p>Mon - Sat: 10 AM - 8 PM (PKT)</p>
-            <p>Sunday: Available for Urgent Requests</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  </div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Google Maps (Full Width) -->
-  <div class="map-section" data-aos="fade-up" data-aos-delay="200">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Contact Form Section (Overlapping) -->
-  <div class="container form-container-overlap">
-    <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-      <div class="col-lg-10">
-        <div class="contact-form-wrapper">
-          <h2 class="text-center mb-4">Get in Touch</h2>
-
-          <form action="forms/contact.php" method="post" class="php-email-form">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="input-with-icon">
-                    <i class="bi bi-person"></i>
-                    <input type="text" class="form-control" name="name" placeholder="First Name" required="">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="form-group">
-                  <div class="input-with-icon">
-                    <i class="bi bi-envelope"></i>
-                    <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-12">
-                <div class="form-group">
-                  <div class="input-with-icon">
-                    <i class="bi bi-text-left"></i>
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="form-group">
-                  <div class="input-with-icon">
-                    <i class="bi bi-chat-dots message-icon"></i>
-                    <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-
-              <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</section><!-- /Contact Section -->
-
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Love Kumar</span>
-          </a>
-          <p>I’m a passionate and experienced web developer delivering high-quality, responsive websites and Shopify stores. From design to deployment, I craft digital experiences that drive results and client satisfaction.</p>
-          <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-  
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Frontend Development</a></li>
-            <li><a href="#">Shopify Customization</a></li>
-            <li><a href="#">WordPress Development</a></li>
-            <li><a href="#">React/Next.js Projects</a></li>
-            <li><a href="#">Responsive Design</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Me</h4>
-          <p>Mithi, Tharparkar Pakistan</p>
-          <p>Available for global projects</p>
-          <p>Remote & Freelance</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+923093084224</span></p>
-          <p><strong>Email:</strong> <span>lovekumaramrani13@gmail.com</span></p>
-        </div>
-  
-      </div>
-    </div>
-  
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Love Kumar</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed with ❤️ by <a href="#">Developer Janu</a>
-      </div>
-    </div>
-  
-  </footer>
-  
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
