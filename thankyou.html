@@ -1,159 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at center, #0f172a, #020617);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: #f8fafc;
-      overflow: hidden;
-    }
+  <head>
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>My New Pen!</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!--  Styles  -->
+    <link rel="stylesheet" href="styles/index.processed.css" />
+  </head>
 
-    .container {
-      text-align: center;
-      animation: fadeIn 1.5s ease-in-out forwards;
-    }
+  <body>
+    <!-- thank-you-wrapper -->
+    <section class="thank-you-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="thank-you-page-logo">
+              <h2>Thanku for Contacting Love Kumar</h2>
+            </div>
 
-    .checkmark {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: inline-block;
-      position: relative;
-      background: #22c55e;
-      margin-bottom: 1.5rem;
-      animation: popIn 0.8s ease-out forwards;
-    }
+            <div class="thank-you-page-content">
+              <h1>Your submission is received and we will contact you soon</h1>
+              <a href="./index.html" class="btn btn-primary arrow-icon">
+                Go back to Homepage
+              </a>
+            </div>
+            <ul class="footer-nav">
+              <li><a href="#">Terms and Conditions </a></li>
+              <li><a href="#"> Privacy Policy </a></li>
+              <lcd  i><a href="#"> FAQ </a></lcd>
+              <li><a href="#"> Contact Us </a></li>
+            </ul>
+            <div class="thank-you-copy">
+              <p>love kumar &copy; 2020 All Rights Reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- thank-you-wrapper -->
 
-    .checkmark::after {
-      content: "";
-      position: absolute;
-      left: 35px;
-      top: 55px;
-      width: 30px;
-      height: 60px;
-      border-right: 6px solid #fff;
-      border-bottom: 6px solid #fff;
-      transform: rotate(45deg) scale(0);
-      transform-origin: center;
-      animation: drawCheck 0.6s ease forwards 0.8s;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(90deg, #facc15, #f59e0b);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: slideDown 1.2s ease-out forwards;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #cbd5e1;
-      margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeInUp 1.5s ease forwards 1s;
-    }
-
-    .btn-back {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #facc15, #f59e0b);
-      color: #1e293b;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      opacity: 0;
-      animation: fadeInUp 1.5s ease forwards 1.5s;
-    }
-
-    .btn-back:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(250,204,21,0.4);
-    }
-
-    /* Keyframes */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @keyframes popIn {
-      from {transform: scale(0.5);}
-      to {transform: scale(1);}
-    }
-
-    @keyframes drawCheck {
-      from {transform: rotate(45deg) scale(0);}
-      to {transform: rotate(45deg) scale(1);}
-    }
-
-    @keyframes slideDown {
-      from {transform: translateY(-30px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    @keyframes fadeInUp {
-      from {transform: translateY(20px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    /* Confetti */
-    .confetti {
-      position: absolute;
-      top: -10px;
-      width: 10px;
-      height: 10px;
-      background-color: #facc15;
-      opacity: 0.8;
-      animation: fall linear forwards;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(100vh) rotate(360deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="checkmark"></div>
-    <h1>Thank You!</h1>
-    <p>Your message has been successfully sent. We’ll get back to you soon.</p>
-    <a href="/" class="btn-back">⬅ Go Back Home</a>
-  </div>
-
-  <script>
-    // Generate Confetti
-    function createConfetti() {
-      const colors = ["#facc15", "#f59e0b", "#22c55e", "#3b82f6", "#ef4444"];
-      for (let i = 0; i < 60; i++) {
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti");
-        confetti.style.left = Math.random() * 100 + "vw";
-        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
-        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-        document.body.appendChild(confetti);
-
-        setTimeout(() => {
-          confetti.remove();
-        }, 5000);
-      }
-    }
-    createConfetti();
-  </script>
-</body>
+    <!-- Scripts -->
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
